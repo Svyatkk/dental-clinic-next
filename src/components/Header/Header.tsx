@@ -5,15 +5,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PAGES } from '../../config/routes'
 import RecordButton from '../RecordButton/RecordButton'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import PopUpWindow from '../PopUpWindow/PopUpWindow'
 import { ServicesType } from '@/types/services.types'
 import Sidebar from '../Sidebar/Sidebar'
 
-export default function Header() {
+type Props = {
+    toggleSidebar: () => void
+}
+
+export default function Header({ toggleSidebar }: Props) {
+
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
+
+
     const [open, setOpen] = useState(false)
+
+
     return (
         <nav className={styles.nav}>
             <Image
@@ -68,12 +77,8 @@ export default function Header() {
                 </div>
             </div>
 
-            <button onClick={() => {
-                setOpen(prev => !prev)
-            }} className={styles.buttonOpenSideBar}>open</button>
+            <button onClick={toggleSidebar} className={styles.buttonOpenSideBar}>open</button>
 
-
-            {<Sidebar isActive={open}></Sidebar>}
             <RecordButton />
         </nav>
     )

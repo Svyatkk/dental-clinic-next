@@ -6,6 +6,7 @@ import { SERVICES } from "@/data/services.data"
 type Props = {
     activeWindow: {}
     isVisible: boolean
+
 }
 
 export default function PopUpWindow({ activeWindow, isVisible }: Props) {

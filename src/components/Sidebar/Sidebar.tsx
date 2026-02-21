@@ -3,13 +3,18 @@ import { useEffect, useState } from 'react'
 import styles from './Sidebar.module.css'
 
 type Props = {
-    isActive?: boolean | null
+    isActive?: boolean | null,
+    close: () => void
+
+
 }
 
-export default function Sidebar({ isActive }: Props) {
+export default function Sidebar({ isActive, close }: Props) {
     return (
         <>
             <div className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
+
+                <button onClick={close}>close</button>
 
 
             </div>
