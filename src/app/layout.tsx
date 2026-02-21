@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header/Header";
 import "./globals.css";
-
+import Footer from "@/components/Footer/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,11 +32,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning={true}
       >
-        <div className="container">
-          <Header></Header>
-          {children}
+        <div className="subContainerBackground">
+          <div className="container">
+            <Header></Header>
+            {children}
+            <Footer></Footer>
 
+          </div>
         </div>
+
       </body>
 
 

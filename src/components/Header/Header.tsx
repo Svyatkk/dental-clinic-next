@@ -1,61 +1,74 @@
 'use client'
 
-import styles from './Header.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
+import styles from './Header.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
 import { PAGES } from '../../config/routes'
-import RecordButton from '../RecordButton/RecordButton';
-import { act, useEffect, useState } from 'react';
-import { SERVICES } from '@/data/services.data';
-import PopUpWindow from './PopUpWindow/PopUpWindow';
-export default function Header() {
+import RecordButton from '../RecordButton/RecordButton'
+import { useState } from 'react'
+import PopUpWindow from '../PopUpWindow/PopUpWindow'
+import { ServicesType } from '@/types/services.types'
 
+
+export default function Header() {
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
     return (
-        <>
-            <nav className={styles.nav}>
-                <Image
-                    className={styles.img}
-                    height={60}
-                    width={20}
-                    src="/logo.png"
-                    alt='alt'
-                    priority
-                ></Image>
+        <nav className={styles.nav}>
+            <Image
+                className={styles.img}
+                height={60}
+                width={20}
+                src="/logo.png"
+                alt="alt"
+                priority
+            />
+            <div className={styles.buttons}>
 
-                <div className={styles.buttons}>
-                    <Link href={PAGES.MAIN}>
-                        <p
-                            onMouseEnter={() => setActiveMenu("Послуга")}
-                            onMouseLeave={() => setActiveMenu(null)}
-                        >
-                            Service
-
-                        </p>
-                        {activeMenu && <PopUpWindow activeWindow={activeMenu} />}
-
-                    </Link>
-
+                <div
+                    className={styles.menuItem}
+                    onMouseEnter={() => setActiveMenu('Послуга')}
+                    onMouseLeave={() => setActiveMenu(null)}
+                >
+                    <Link href={PAGES.MAIN}>Послуга</Link>
+                    <PopUpWindow activeWindow="Послуга" isVisible={activeMenu === 'Послуга'} />
                 </div>
 
-                <div className={styles.buttons}>
+                <div
+                    className={styles.menuItem}
+                    onMouseEnter={() => setActiveMenu('Інше')}
+                    onMouseLeave={() => setActiveMenu(null)}
+                >
                     <Link href={PAGES.MAIN}>
-                        <p
-                            onMouseEnter={() => setActiveMenu("Інше")}
-                            onMouseLeave={() => setActiveMenu(null)}
-                        >
-
-                            Service
-                        </p>
-                        {activeMenu && <PopUpWindow activeWindow={activeMenu} />}
-
+                        <p>Ціни</p>
                     </Link>
-
+                    <PopUpWindow activeWindow="Інше" isVisible={activeMenu === 'Інше'} />
                 </div>
+                <div
+                    className={styles.menuItem}
+                    onMouseEnter={() => setActiveMenu('Інше')}
+                    onMouseLeave={() => setActiveMenu(null)}
+                >
+                    <Link href={PAGES.MAIN}>
+                        <p>Про нас</p>
+                    </Link>
+                    <PopUpWindow activeWindow="Інше" isVisible={activeMenu === 'Інше'} />
+                </div>  <div
+                    className={styles.menuItem}
+                    onMouseEnter={() => setActiveMenu('Інше')}
+                    onMouseLeave={() => setActiveMenu(null)}
 
-                <RecordButton></RecordButton>
-            </nav >
-        </>
+                >
+
+                    <Link href={PAGES.MAIN}>
+                        <p>Контакти</p>
+                    </Link>
+                    <PopUpWindow activeWindow="Інше" isVisible={activeMenu === 'Інше'} />
+                </div>
+            </div>
+
+
+            <RecordButton />
+        </nav>
     )
 }
