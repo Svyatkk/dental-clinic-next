@@ -1,0 +1,15 @@
+.sideBar {
+    position: fixed;
+    height: 100vh;
+    width: 20vh;
+    background-color: white;
+    opacity: 0;
+
+
+}
+
+
+
+.sideBar.active {
+    opacity: 1;
+}

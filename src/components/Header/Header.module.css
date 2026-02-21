@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
 }
 
 .buttons {
@@ -27,6 +29,16 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+}
 
+.buttonOpenSideBar {
+    display: none;
 
+}
+
+@media (max-width: 1220px) {
+    .buttonOpenSideBar {
+        display: block;
+
+    }
 }

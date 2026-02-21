@@ -3,11 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header/Header";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+
+import Sidebar from "@/components/Sidebar/Sidebar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 
 
 
@@ -33,8 +34,15 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <div className="subContainerBackground">
+
+
+          <Sidebar></Sidebar>
+
+
+
           <div className="container">
-            <Header></Header>
+
+            <Header ></Header>
             {children}
             <Footer></Footer>
 
@@ -44,6 +52,6 @@ export default function RootLayout({
       </body>
 
 
-    </html>
+    </html >
   );
 }

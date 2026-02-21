@@ -2,12 +2,12 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
 
-        {/* LEFT BLOCK */}
         <div className={styles.blockAdress}>
           <div className={styles.textBlock}>
             <h1>Комплексні стоматологічні послуги</h1>
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* RIGHT BLOCK */}
+
         <div className={styles.blockImages}>
           <div className={styles.grayCircle}>
             <div className={styles.whiteCircle}></div>

@@ -24,6 +24,7 @@
     max-width: 320px;
     border: 1px solid white;
 
+
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -87,8 +88,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 
