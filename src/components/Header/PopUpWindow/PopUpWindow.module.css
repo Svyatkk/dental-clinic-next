@@ -1,0 +1,13 @@
+.block {
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.block.active {
+    opacity: 1;
+}
