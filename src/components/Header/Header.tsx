@@ -16,9 +16,6 @@ type Props = {
 
 export default function Header({ toggleSidebar }: Props) {
     const [isActive, setIsActive] = useState(false)
-
-
-
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
     const [open, setOpen] = useState(false)
