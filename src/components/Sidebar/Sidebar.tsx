@@ -13,8 +13,6 @@ export default function Sidebar({ isActive, close }: Props) {
         <>
             <div className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
 
-                <button onClick={close}>close</button>
-
 
             </div>
 

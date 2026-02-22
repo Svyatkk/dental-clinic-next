@@ -9,6 +9,7 @@ export default function Home() {
       <div className={styles.container}>
 
         <div className={styles.blockAdress}>
+
           <div className={styles.textBlock}>
             <h1>Комплексні стоматологічні послуги</h1>
             <p>Допоможемо засяяти усмішкою мрії</p>
@@ -20,6 +21,7 @@ export default function Home() {
             <Link href="/">098 881 93 58</Link>
             <Link href="/">Дивитись на мапі</Link>
           </div>
+
         </div>
 
 
@@ -29,7 +31,15 @@ export default function Home() {
           </div>
         </div>
 
+        <div className={styles.blockDesc}>
+          Ми раді вітати вас у нашій стоматологічній клініці Sigma Dent, де ми піклуємося про ваше здоров’я та усмішку з найкращими спеціалістами і сучасними технологіями! Наша команда професіоналів працює над тим, щоб кожен візит був комфортним, а лікування ефективним і безболісним.
+
+
+        </div>
       </div>
+
+
+
     </div>
   );
 }

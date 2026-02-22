@@ -15,10 +15,18 @@ type Props = {
 }
 
 export default function Header({ toggleSidebar }: Props) {
+    const [isActive, setIsActive] = useState(false)
+
+
 
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
     const [open, setOpen] = useState(false)
+
+    const handleBurger = () => {
+        toggleSidebar()
+        setIsActive(!isActive)
+    }
 
 
     return (
@@ -31,8 +39,8 @@ export default function Header({ toggleSidebar }: Props) {
                 alt="alt"
                 priority
             />
-            <div className={styles.buttons}>
 
+            <div className={styles.buttons}>
 
                 <div
                     className={styles.menuItem}
@@ -44,9 +52,7 @@ export default function Header({ toggleSidebar }: Props) {
                 </div>
 
 
-                <div
-                    className={styles.menuItem}
-                >
+                <div className={styles.menuItem}>
                     <Link href={PAGES.MAIN}>
                         <p>Ціни</p>
                     </Link>
@@ -55,12 +61,10 @@ export default function Header({ toggleSidebar }: Props) {
                     className={styles.menuItem}
 
                     onMouseEnter={() => setActiveMenu('Про нас')}
-                    onMouseLeave={() => setActiveMenu(null)}
-                >
+                    onMouseLeave={() => setActiveMenu(null)}>
                     <Link
 
                         href={PAGES.MAIN}>
-
                         <p>Про нас</p>
 
                     </Link>
@@ -79,8 +83,14 @@ export default function Header({ toggleSidebar }: Props) {
                 </div>
             </div>
 
-            <button onClick={toggleSidebar} className={styles.buttonOpenSideBar}>open</button>
-
+            <button
+                className={`${styles.burger} ${isActive ? styles.open : ''}`}
+                onClick={handleBurger}
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <RecordButton />
         </nav>
     )

@@ -2,10 +2,11 @@
     width: 100%;
     height: var(--height-header);
     background-color: transparent;
-    max-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid white;
+    height: 80px;
 
 }
 
@@ -19,6 +20,7 @@
     border: 1px solid white;
     width: 200px;
     border-radius: 25px;
+    z-index: 3000;
 }
 
 .menuItem {
@@ -39,5 +41,75 @@
     .buttonOpenSideBar {
         display: block;
 
+
+    }
+
+    .buttons {
+        display: none;
+    }
+}
+
+.burger {
+    height: 70%;
+    width: 60px;
+    background-color: transparent;
+    display: none;
+    position: relative;
+    border: none;
+
+}
+
+.burger span {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: 3000;
+}
+
+.burger span:nth-child(1) {
+    top: 25%;
+    transition: 0.3 ease;
+
+}
+
+.burger span:nth-child(3) {
+    top: 75%;
+    transition: 0.3 ease;
+
+}
+
+.burger.open span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.3 ease;
+
+}
+
+.burger.open span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.3 ease;
+
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .burger {
+        display: block;
+
+
+        z-index: 3000;
     }
 }
