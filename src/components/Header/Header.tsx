@@ -18,8 +18,6 @@ export default function Header({ toggleSidebar }: Props) {
 
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
-
-
     const [open, setOpen] = useState(false)
 
 
@@ -35,45 +33,49 @@ export default function Header({ toggleSidebar }: Props) {
             />
             <div className={styles.buttons}>
 
+
                 <div
                     className={styles.menuItem}
                     onMouseEnter={() => setActiveMenu('Послуга')}
                     onMouseLeave={() => setActiveMenu(null)}
                 >
                     <Link href={PAGES.MAIN}>Послуга</Link>
-                    <PopUpWindow activeWindow="Послуга" isVisible={activeMenu === 'Послуга'} />
+                    <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуга'} />
                 </div>
+
 
                 <div
                     className={styles.menuItem}
-                    onMouseEnter={() => setActiveMenu('Інше')}
-                    onMouseLeave={() => setActiveMenu(null)}
                 >
                     <Link href={PAGES.MAIN}>
                         <p>Ціни</p>
                     </Link>
-                    <PopUpWindow activeWindow="Інше" isVisible={activeMenu === 'Інше'} />
                 </div>
                 <div
                     className={styles.menuItem}
-                    onMouseEnter={() => setActiveMenu('Інше')}
+
+                    onMouseEnter={() => setActiveMenu('Про нас')}
                     onMouseLeave={() => setActiveMenu(null)}
                 >
-                    <Link href={PAGES.MAIN}>
+                    <Link
+
+                        href={PAGES.MAIN}>
+
                         <p>Про нас</p>
+
                     </Link>
-                    <PopUpWindow activeWindow="Інше" isVisible={activeMenu === 'Інше'} />
-                </div>  <div
+                    <PopUpWindow type='about' activeWindow={activeMenu} isVisible={activeMenu === 'Про нас'} />
+
+                </div>
+
+                <div
                     className={styles.menuItem}
-                    onMouseEnter={() => setActiveMenu('Інше')}
-                    onMouseLeave={() => setActiveMenu(null)}
 
                 >
 
                     <Link href={PAGES.MAIN}>
                         <p>Контакти</p>
                     </Link>
-                    <PopUpWindow activeWindow="Інше" isVisible={activeMenu === 'Інше'} />
                 </div>
             </div>
 

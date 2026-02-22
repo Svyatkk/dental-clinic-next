@@ -51,7 +51,11 @@ a {
   width: 100%;
   z-index: 4000;
   height: 100vh;
-  background-image: url('../images/mainConainerImg.jpg');
+  background-image: url('../images/marble.jpg.webp');
+
+  background-color: rgb(37, 37, 37);
+
+  background-blend-mode: color-dodge;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

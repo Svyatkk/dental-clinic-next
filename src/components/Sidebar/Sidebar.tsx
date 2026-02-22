@@ -6,7 +6,6 @@ type Props = {
     isActive?: boolean | null,
     close: () => void
 
-
 }
 
 export default function Sidebar({ isActive, close }: Props) {

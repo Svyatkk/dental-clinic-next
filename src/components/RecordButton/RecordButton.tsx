@@ -6,6 +6,7 @@ export default function RecordButton() {
 
     const [open, setOpen] = useState(false)
 
+
     return (
         <>
             <button onClick={() => {

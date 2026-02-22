@@ -1,22 +1,59 @@
 'use client'
 
+import { useState } from 'react'
 import style from './PopUpWindow.module.css'
 import { SERVICES } from "@/data/services.data"
+import { ServicesType } from '@/types/services.types'
+import { AboutUsData } from '@/data/aboutUs.data'
 
+type MenuType = 'services' | 'about'
 type Props = {
-    activeWindow: {}
+    activeWindow: string | null
     isVisible: boolean
-
+    type: MenuType
 }
 
-export default function PopUpWindow({ activeWindow, isVisible }: Props) {
-    const service = SERVICES.find(s => s.name === activeWindow)
-    if (!service) return null
-    return (
-        <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
-            <div className={style.kolo}></div>
-            <h1>{service.name}</h1>
-            <p>{service.price} грн</p>
-        </div>
-    )
+export default function PopUpWindow({ activeWindow, isVisible, type }: Props) {
+
+
+
+    if (type === 'services') {
+        const list = SERVICES.slice(1)
+
+        return (
+            <>
+                <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
+                    <div className={style.kolo}></div>
+
+                    {list.map((service, index) => (
+                        <div className={style.element} key={index}>
+                            {service.name}
+                        </div>
+                    ))}
+                </div>
+            </>
+
+        )
+    }
+
+    if (type === 'about') {
+        const list = AboutUsData
+
+        return (
+            <>
+                <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
+                    <div className={style.kolo}></div>
+
+                    {list.map((item, index) => (
+                        <div className={style.element} key={index}>
+                            {item.title}
+                        </div>
+                    ))}
+                </div>
+            </>
+
+        )
+    }
+
+    return null
 }
