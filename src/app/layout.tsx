@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 import { useState } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -56,6 +57,8 @@ export default function RootLayout({
           </div>
 
         </div>
+
+        <SpeedInsights />
 
       </body>
     </html>
