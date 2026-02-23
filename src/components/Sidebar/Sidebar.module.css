@@ -5,8 +5,9 @@
     height: 100vh;
     width: 100%;
     background: rgb(51, 51, 51);
-    ;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translateX(-100%);
     transition: transform 0.35s ease;
 
@@ -15,4 +16,12 @@
 
 .sideBar.active {
     transform: translateX(0);
+}
+
+
+
+@media (max-width: 1220px) {
+    .buttons {
+        border: 1px solid red;
+    }
 }

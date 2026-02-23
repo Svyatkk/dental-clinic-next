@@ -20,6 +20,8 @@ export default function Header({ toggleSidebar }: Props) {
     const [isActive, setIsActive] = useState(false)
     const [open, setOpen] = useState(false)
 
+
+
     const handleBurger = () => {
         toggleSidebar()
         setIsActive(!isActive)
@@ -35,7 +37,11 @@ export default function Header({ toggleSidebar }: Props) {
                 alt="alt"
                 priority
             />
-            <MenuItems></MenuItems>
+
+            <div className={styles.fixSidebar}>
+                <MenuItems></MenuItems>
+
+            </div>
 
             <button
                 className={`${styles.burger} ${isActive ? styles.open : ''}`}
