@@ -4,8 +4,6 @@
     gap: 100px;
 }
 
-
-
 .menuItem {
     position: relative;
     display: flex;
@@ -13,4 +11,20 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+}
+
+
+@media (max-width: 1220px) {
+    .buttons {
+        width: 90%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+    .menuItem {
+        border-bottom: 1px solid white;
+        padding: 30px;
+
+    }
 }

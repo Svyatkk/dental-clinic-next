@@ -1,20 +1,21 @@
 'use client'
 
 import styles from './MenuItems.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import PopUpWindow from '../PopUpWindow/PopUpWindow'
 import { PAGES } from '@/config/routes'
 
 
+
 export default function MenuItems() {
 
-    const [isActive, setIsActive] = useState(false)
+
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
+
     return (
         <>
             <div className={styles.buttons}>
-
                 <div
                     className={styles.menuItem}
                     onMouseEnter={() => setActiveMenu('Послуга')}
@@ -53,9 +54,7 @@ export default function MenuItems() {
                         <p>Контакти</p>
                     </Link>
                 </div>
-            </div>
-
-
+            </div >
         </>
     )
 }

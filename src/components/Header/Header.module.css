@@ -98,6 +98,11 @@
         z-index: 3000;
     }
 
+    .fixSidebar {
+        display: none;
+    }
+
+
 
     .nav {
         padding-left: 10px;
