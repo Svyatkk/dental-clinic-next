@@ -10,26 +10,11 @@
 
 }
 
-.buttons {
-    width: auto;
-    display: flex;
-    gap: 100px;
-}
-
 .img {
     border: 1px solid white;
     width: 200px;
     border-radius: 25px;
     z-index: 3000;
-}
-
-.menuItem {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .buttonOpenSideBar {

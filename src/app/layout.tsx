@@ -26,11 +26,14 @@ export default function RootLayout({
 }) {
 
 
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const toggleSidebar = () => {
     setIsSidebarOpen(prev => !prev)
   }
+
+
 
   const closeSidebar = () => {
     setIsSidebarOpen(false)

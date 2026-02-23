@@ -1,0 +1,61 @@
+'use client'
+
+import styles from './MenuItems.module.css'
+import { useState } from 'react'
+import Link from 'next/link'
+import PopUpWindow from '../PopUpWindow/PopUpWindow'
+import { PAGES } from '@/config/routes'
+
+
+export default function MenuItems() {
+
+    const [isActive, setIsActive] = useState(false)
+    const [activeMenu, setActiveMenu] = useState<string | null>(null)
+    return (
+        <>
+            <div className={styles.buttons}>
+
+                <div
+                    className={styles.menuItem}
+                    onMouseEnter={() => setActiveMenu('Послуга')}
+                    onMouseLeave={() => setActiveMenu(null)}
+                >
+                    <Link href={PAGES.MAIN}>Послуга</Link>
+                    <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуга'} />
+                </div>
+
+
+                <div className={styles.menuItem}>
+                    <Link href={PAGES.MAIN}>
+                        <p>Ціни</p>
+                    </Link>
+                </div>
+                <div
+                    className={styles.menuItem}
+
+                    onMouseEnter={() => setActiveMenu('Про нас')}
+                    onMouseLeave={() => setActiveMenu(null)}>
+                    <Link
+
+                        href={PAGES.MAIN}>
+                        <p>Про нас</p>
+
+                    </Link>
+                    <PopUpWindow type='about' activeWindow={activeMenu} isVisible={activeMenu === 'Про нас'} />
+
+                </div>
+
+                <div
+                    className={styles.menuItem}
+                >
+
+                    <Link href={PAGES.MAIN}>
+                        <p>Контакти</p>
+                    </Link>
+                </div>
+            </div>
+
+
+        </>
+    )
+}
