@@ -44,13 +44,11 @@ a {
 .container {
   margin: 0 auto;
   width: 70%;
-  border: 1px solid white;
 
   position: relative;
 }
 
 .subContainerBackground {
-  border: 1px solid red;
   width: 100%;
   z-index: 4000;
   height: 100vh;

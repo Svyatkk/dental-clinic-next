@@ -25,7 +25,6 @@ export default function Header({ toggleSidebar }: Props) {
         setIsActive(!isActive)
     }
 
-
     return (
         <nav className={styles.nav}>
             <Image
@@ -71,7 +70,6 @@ export default function Header({ toggleSidebar }: Props) {
 
                 <div
                     className={styles.menuItem}
-
                 >
 
                     <Link href={PAGES.MAIN}>

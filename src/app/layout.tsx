@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/Footer";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import "./globals.css";
 import { useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
 
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)

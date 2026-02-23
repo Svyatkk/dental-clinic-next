@@ -166,7 +166,6 @@
 
 
     .grayCircle {
-
         position: relative;
         width: 100%;
         bottom: auto;
@@ -176,10 +175,9 @@
         font-size: 14px;
         padding: 20px;
         height: auto;
-        bottom: 0;
-
-
+        bottom: 0
     }
+
 
     .whiteCircle {
         width: 80%;
