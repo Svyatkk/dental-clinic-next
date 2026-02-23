@@ -1,0 +1,16 @@
+.buttons {
+    width: auto;
+    display: flex;
+    gap: 100px;
+}
+
+
+
+.menuItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
