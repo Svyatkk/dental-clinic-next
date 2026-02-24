@@ -14,7 +14,7 @@ type Props = {
 }
 
 
-export default function PopUpWindow({ activeWindow, isVisible, type }: Props) {
+export default function PopUpWindow({ isVisible, type }: Props) {
 
     if (type === 'services') {
         const list = SERVICES.slice(1)
@@ -33,6 +33,7 @@ export default function PopUpWindow({ activeWindow, isVisible, type }: Props) {
             </>
         )
     }
+
 
 
     if (type === 'about') {

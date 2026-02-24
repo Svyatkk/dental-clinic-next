@@ -12,6 +12,7 @@ export default function MenuItems() {
 
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
+
     return (
         <>
             <div className={styles.buttons}>
@@ -19,11 +20,26 @@ export default function MenuItems() {
                     className={styles.menuItem}
                     onMouseEnter={() => setActiveMenu('Послуга')}
                     onMouseLeave={() => setActiveMenu(null)}
+
                 >
+
 
                     <Link href={PAGES.SERVICES}>Послуги</Link>
                     <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуга'} />
+
+                    <div onClick={() => {
+                        setActiveMenu('Послуга')
+
+                    }} className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}>
+
+
+
+                    </div>
+
                 </div>
+
+
+
 
                 <div className={styles.menuItem}>
                     <Link href={PAGES.MAIN}>
@@ -42,7 +58,10 @@ export default function MenuItems() {
 
                     </Link>
                     <PopUpWindow type='about' activeWindow={activeMenu} isVisible={activeMenu === 'Про нас'} />
+                    <div onClick={() => {
+                        setActiveMenu('Про нас')
 
+                    }} className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}></div>
                 </div>
 
                 <div

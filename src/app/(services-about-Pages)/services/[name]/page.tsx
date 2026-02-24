@@ -5,16 +5,17 @@ type Props = {
     params: Promise<{ name: string }>
 }
 
+
 export default async function ServicePage({ params }: Props) {
     const { name } = await params
 
-    const decodedName = decodeURIComponent(name)
-
-    const found = SERVICES.find(s => s.name === decodedName)
+    const found = SERVICES.find(s => s.engName === name)
 
     if (!found) {
         return notFound()
     }
+
+
 
 
     return (

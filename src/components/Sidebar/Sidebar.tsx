@@ -15,6 +15,7 @@ export default function Sidebar({ isActive, close }: Props) {
         <>
             <div className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
 
+
                 <MenuItems></MenuItems>
             </div>
 
