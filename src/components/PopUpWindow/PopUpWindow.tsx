@@ -13,17 +13,16 @@ type Props = {
     type: MenuType
 }
 
+
 export default function PopUpWindow({ activeWindow, isVisible, type }: Props) {
-
-
 
     if (type === 'services') {
         const list = SERVICES.slice(1)
 
+
         return (
             <>
                 <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
-                    <div className={style.kolo}></div>
 
                     {list.map((service, index) => (
                         <div className={style.element} key={index}>
@@ -32,9 +31,9 @@ export default function PopUpWindow({ activeWindow, isVisible, type }: Props) {
                     ))}
                 </div>
             </>
-
         )
     }
+
 
     if (type === 'about') {
         const list = AboutUsData
@@ -42,7 +41,6 @@ export default function PopUpWindow({ activeWindow, isVisible, type }: Props) {
         return (
             <>
                 <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
-                    <div className={style.kolo}></div>
 
                     {list.map((item, index) => (
                         <div className={style.element} key={index}>

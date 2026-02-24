@@ -1,0 +1,18 @@
+
+import { generateMetadata as generateMetadataService } from "@/services/generateMetadata.services"
+import { PAGES } from "@/config/routes"
+import About from "./About"
+
+
+export function generateMetadata() {
+    return generateMetadataService(PAGES.ABOUT)
+}
+
+export default function ABoutPage() {
+
+    return (
+        <>
+            <About></About>
+        </>
+    )
+}

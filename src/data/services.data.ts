@@ -5,6 +5,7 @@ export const SERVICES: ServicesType[] = [
         name: 'Послуга',
         price: 200,
     },
+
     {
         name: 'Терапевтична стоматологія',
         price: 200

@@ -10,7 +10,6 @@ import { PAGES } from '@/config/routes'
 
 export default function MenuItems() {
 
-
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
     return (
@@ -21,10 +20,10 @@ export default function MenuItems() {
                     onMouseEnter={() => setActiveMenu('Послуга')}
                     onMouseLeave={() => setActiveMenu(null)}
                 >
-                    <Link href={PAGES.MAIN}>Послуга</Link>
+
+                    <Link href={PAGES.SERVICES}>Послуги</Link>
                     <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуга'} />
                 </div>
-
 
                 <div className={styles.menuItem}>
                     <Link href={PAGES.MAIN}>
