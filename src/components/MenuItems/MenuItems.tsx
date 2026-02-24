@@ -19,12 +19,10 @@ export default function MenuItems() {
                 <div
                     className={styles.menuItem}
                     onMouseEnter={() => setActiveMenu('Послуга')}
-                    onMouseLeave={() => setActiveMenu(null)}
-
-                >
+                    onMouseLeave={() => setActiveMenu(null)}>
 
 
-                    <Link href={PAGES.SERVICES}>Послуги</Link>
+                    <Link href={PAGES.SERVICES.path}>Послуги</Link>
                     <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуга'} />
 
                     <div onClick={() => {
@@ -32,17 +30,12 @@ export default function MenuItems() {
 
                     }} className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}>
 
-
-
                     </div>
 
                 </div>
 
-
-
-
                 <div className={styles.menuItem}>
-                    <Link href={PAGES.MAIN}>
+                    <Link href={PAGES.MAIN.path}>
                         <p>Ціни</p>
                     </Link>
                 </div>
@@ -53,7 +46,7 @@ export default function MenuItems() {
                     onMouseLeave={() => setActiveMenu(null)}>
                     <Link
 
-                        href={PAGES.MAIN}>
+                        href={PAGES.MAIN.path}>
                         <p>Про нас</p>
 
                     </Link>
@@ -68,7 +61,7 @@ export default function MenuItems() {
                     className={styles.menuItem}
                 >
 
-                    <Link href={PAGES.MAIN}>
+                    <Link href={PAGES.MAIN.path}>
                         <p>Контакти</p>
                     </Link>
                 </div>

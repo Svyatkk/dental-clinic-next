@@ -102,6 +102,32 @@
 }
 
 
+.blockRec {
+    border: 1px solid red;
+    height: 200px;
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 50%;
+    border: 1px solid white;
+
+}
+
+.images {
+    display: grid;
+    grid-column: (2fr);
+
+    width: 50%;
+    border: 1px solid white;
+
+}
+
+
 .whiteCircle {
     width: 82%;
     height: 82%;
@@ -109,11 +135,11 @@
     background: white;
 }
 
-@media (max-width: 1600px) {
-    .grayCircle {
-        width: 700px;
-    }
+
+.details {
+    color: gray;
 }
+
 
 @media (max-width: 1220px) {
     .container {
@@ -122,6 +148,7 @@
         padding: 0 10px;
         min-height: calc(100vh - 80px);
     }
+
 
     .blockAdress {
         flex: 1 1 auto;

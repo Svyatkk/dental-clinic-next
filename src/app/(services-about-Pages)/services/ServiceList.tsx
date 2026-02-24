@@ -12,8 +12,10 @@ export default function ServicesList() {
                 SERVICES.map((s, index) => {
 
                     return <div className={styles.block} key={index}>
-                        <Link href={`${PAGES.SERVICES}/${s.engName}`}><h1>{s.name}</h1></Link>
+                        <Link href={`${PAGES.SERVICES.path}/${s.engName}`}><h1>{s.name}</h1></Link>
                         <h1>{s.price}</h1>
+
+
 
                     </div>
                 })

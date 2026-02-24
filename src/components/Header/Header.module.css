@@ -90,7 +90,7 @@
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
     .burger {
         display: block;
 
@@ -101,7 +101,6 @@
     .fixSidebar {
         display: none;
     }
-
 
 
     .nav {

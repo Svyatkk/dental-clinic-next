@@ -3,7 +3,6 @@
 import styles from './Header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PAGES } from '../../config/routes'
 import RecordButton from '../RecordButton/RecordButton'
 import { useEffect, useState } from 'react'
 import PopUpWindow from '../PopUpWindow/PopUpWindow'

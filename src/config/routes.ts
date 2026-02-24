@@ -1,5 +1,17 @@
 export const PAGES = {
-    MAIN: '/',
-    ABOUT: '/about',
-    SERVICES: '/services',
+    MAIN: {
+        name: 'Головна',
+        path: '/'
+    },
+    ABOUT: {
+        name: 'Про нас',
+        path: '/about',
+    },
+
+
+    SERVICES: {
+        name: 'Послуги',
+        path: '/services',
+    }
+
 }

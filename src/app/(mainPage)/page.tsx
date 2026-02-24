@@ -3,11 +3,10 @@ import Main from "./Main";
 import { PAGES } from "@/config/routes";
 import { generateMetadata as getMetadataService } from "@/services/generateMetadata.services";
 export function generateMetadata() {
-  return getMetadataService(PAGES.MAIN);
+  return getMetadataService(PAGES.MAIN.name);
 }
 
 export default function Home() {
-
 
   return (
     <>
