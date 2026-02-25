@@ -7,11 +7,13 @@ export const PAGES = {
         name: 'Про нас',
         path: '/about',
     },
-
-
     SERVICES: {
         name: 'Послуги',
-        path: '/services',
+        path: '/services-page',
+    },
+    PRICE_LIST: {
+        name: 'Ціни',
+        path: '/pricelist'
     }
 
 }

@@ -5,7 +5,36 @@
     align-items: center;
     height: auto;
     position: relative;
+    border: 1px solid red;
+
+
 }
+
+.sublayoutMain {
+    border: 1px solid green;
+    width: 100%;
+    background-image: url('../../images/marble.jpg.webp');
+    background-color: rgb(37, 37, 37);
+
+
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.layoutMain {
+    margin: 0 auto;
+    width: 70%;
+
+
+
+    position: relative;
+}
+
+
 
 .blockDesc {
     position: absolute;
@@ -210,5 +239,9 @@
     .whiteCircle {
         width: 80%;
         height: 80%;
+    }
+
+    .layoutMain {
+        width: 100%;
     }
 }

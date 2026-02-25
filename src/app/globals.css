@@ -41,24 +41,18 @@ a {
   text-decoration: none;
 }
 
-.container {
-  margin: 0 auto;
-  width: 70%;
-
-  position: relative;
-}
-
 .subContainerBackground {
   width: 100%;
   z-index: 4000;
   height: 100vh;
-  background-image: url('../images/marble.jpg.webp');
 
-  background-color: rgb(37, 37, 37);
 
-  background-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
   position: relative;
 }
 
@@ -70,7 +64,8 @@ a {
 
 
 @media (max-width: 1200) {
-  .container {
+  .subContainerBackground {
     width: 100%;
+    border: 1px solid red;
   }
 }

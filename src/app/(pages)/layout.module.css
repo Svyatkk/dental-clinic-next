@@ -1,0 +1,7 @@
+.container {
+    border: 10px solid yellow;
+    margin: 0 auto;
+    width: 70%;
+
+    position: relative;
+}

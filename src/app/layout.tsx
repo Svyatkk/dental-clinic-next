@@ -16,9 +16,6 @@ const geistSans = Geist({
 
 
 
-
-
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -50,13 +47,11 @@ export default function RootLayout({
 
           <Sidebar isActive={isSidebarOpen} close={closeSidebar} />
 
-          <div className="container">
-            <Header toggleSidebar={toggleSidebar} />
+          <Header toggleSidebar={toggleSidebar} />
 
-            {children}
+          {children}
 
-            <Footer />
-          </div>
+          <Footer />
 
         </div>
 

@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <>
       <Main></Main>
-      <BlockRecomendation></BlockRecomendation>
     </>
   );
 }
