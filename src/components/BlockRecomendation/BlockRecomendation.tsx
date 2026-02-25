@@ -6,6 +6,7 @@ export default function BlockRecomendation() {
 
     return (
         <>
+
             <section className={styles.section_rec}>
 
                 <div className={styles.blocks_recomendation}>
