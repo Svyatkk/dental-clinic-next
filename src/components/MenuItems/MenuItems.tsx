@@ -18,17 +18,17 @@ export default function MenuItems() {
             <div className={styles.buttons}>
                 <div
                     className={styles.menuItem}
-                    onMouseEnter={() => setActiveMenu('Послуга')}
+                    onMouseEnter={() => setActiveMenu('Послуги')}
                     onMouseLeave={() => setActiveMenu(null)}>
 
 
                     <Link href={PAGES.SERVICES.path}>Послуги</Link>
-                    <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуга'} />
+                    <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуги'} />
 
                     <div onClick={() => {
-                        setActiveMenu('Послуга')
+                        setActiveMenu('Послуги')
 
-                    }} className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}>
+                    }} className={`${styles.arrowDown} ${activeMenu === 'Послуги' ? styles.active : ''}`}>
 
                     </div>
 
@@ -56,6 +56,8 @@ export default function MenuItems() {
 
                     }} className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}></div>
                 </div>
+
+
 
                 <div
                     className={styles.menuItem}

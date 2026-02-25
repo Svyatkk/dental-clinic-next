@@ -11,7 +11,8 @@ export const metadata: MetaDataTypes[] = [
         title: "Про нас",
         description: "",
         page: PAGES.ABOUT.path
-
     }
+
+
 ]
 

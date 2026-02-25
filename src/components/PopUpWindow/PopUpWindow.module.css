@@ -16,6 +16,8 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     font-size: 1em;
     gap: 10px;
+
+
 }
 
 
@@ -47,8 +49,7 @@
 .element:hover::before {
     opacity: 1;
     left: -20px;
-    width: 20px;
-
+    width: 20px
 }
 
 .element:hover {
@@ -97,12 +98,20 @@
 
     }
 
+    .block.visible {
+        margin: 10px;
+        border: 1px solid red;
+
+
+    }
+
     .visible {
         max-height: 500px;
         padding: 20px;
         opacity: 1;
         pointer-events: auto;
     }
+
 
     .block::before {
         display: none;

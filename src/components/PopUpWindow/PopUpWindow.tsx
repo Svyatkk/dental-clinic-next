@@ -18,8 +18,6 @@ export default function PopUpWindow({ isVisible, type }: Props) {
 
     if (type === 'services') {
         const list = SERVICES.slice(1)
-
-
         return (
             <>
                 <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
@@ -33,7 +31,6 @@ export default function PopUpWindow({ isVisible, type }: Props) {
             </>
         )
     }
-
 
 
     if (type === 'about') {
