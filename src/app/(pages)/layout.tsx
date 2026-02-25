@@ -1,6 +1,6 @@
 import Header from '@/components/Header/Header'
 import styles from './layout.module.css'
-
+import { PAGES } from '@/config/routes'
 type Props = {
     children: React.ReactNode
 }

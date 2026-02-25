@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block {
+    background-color: rgb(61, 61, 61);
+    width: 60%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    flex-direction: column;
+
+    transition: all 0.4s ease;
+}
+
+
+.list {
+    width: 100%;
+    background-color: black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+
+
+
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+    box-sizing: border-box;
+}
+
+
+.active .list {
+
+    max-height: 500px;
+    opacity: 1;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.name {
+    margin: 15px 0;
+    width: 100%;
+    padding-left: 10px;
+}
