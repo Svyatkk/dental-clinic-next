@@ -1,13 +1,48 @@
+/* Початковий стан (на самій горі) */
 .nav {
-    width: 70%;
-    height: var(--height-header);
+    width: 100%;
     background-color: transparent;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.content {
+    display: flex;
+    width: 70%;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid white;
-    height: 80px;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
+.scrolled {
+    background-color: rgba(37, 37, 37, 0.65);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    height: 70px;
+    width: 85%;
+    top: 15px;
+
+
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.scrolled .content {
+    width: 95%;
 }
 
 .img {
@@ -15,12 +50,20 @@
     width: 200px;
     border-radius: 25px;
     z-index: 3000;
+
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.scrolled .img {
+    width: 140px;
+    border-radius: 15px;
+
 }
 
 .buttonOpenSideBar {
     display: none;
-
 }
+
 
 @media (max-width: 1220px) {
     .buttonOpenSideBar {
@@ -41,7 +84,11 @@
     display: none;
     position: relative;
     border: none;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
+.scrolled .burger {
+    transform: scale(0.85);
 }
 
 .burger span {
@@ -98,11 +145,15 @@
         z-index: 3000;
     }
 
+
+
     .fixSidebar {
         display: none;
     }
 
-
+    .content {
+        width: 100%;
+    }
 
     .nav {
         padding-left: 10px;

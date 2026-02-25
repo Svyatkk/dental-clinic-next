@@ -9,11 +9,12 @@ export default function ServicesAboutLayout({ children }: Props) {
     return (
         <>
 
+
             <div style={{ backgroundColor: "rgb(51, 51, 51)" }}>
 
+                {children}
 
             </div>
-            {children}
 
         </>
 

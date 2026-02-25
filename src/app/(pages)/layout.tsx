@@ -1,3 +1,4 @@
+import Header from '@/components/Header/Header'
 import styles from './layout.module.css'
 
 type Props = {
@@ -10,6 +11,8 @@ export default function LayoutPages({ children }: Props) {
         <>
 
             <div className={styles.container}>
+
+
                 {children}
 
 

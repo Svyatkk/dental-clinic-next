@@ -15,44 +15,64 @@ type Props = {
 }
 
 export default function Header({ toggleSidebar }: Props) {
+    const [scrolled, setScrolled] = useState(false)
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10)
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
 
     const [isActive, setIsActive] = useState(false)
     const [open, setOpen] = useState(false)
-
-
 
     const handleBurger = () => {
         toggleSidebar()
         setIsActive(!isActive)
     }
 
+
     return (
-        <nav className={styles.nav}>
-            <Image
-                className={styles.img}
-                height={60}
-                width={20}
-                src="/logo.png"
-                alt="alt"
-                priority
-            />
 
-            <div className={styles.fixSidebar}>
-                <MenuItems></MenuItems>
 
+        <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+
+            <div className={styles.content}>
+
+                <Image
+                    className={styles.img}
+                    height={60}
+                    width={20}
+                    src="/logo.png"
+                    alt="alt"
+                    priority
+                />
+
+                <div className={styles.fixSidebar}>
+                    <MenuItems></MenuItems>
+
+                </div>
+
+                <button
+                    className={`${styles.burger} ${isActive ? styles.open : ''}`}
+                    onClick={handleBurger}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <RecordButton />
             </div>
 
-            <button
-                className={`${styles.burger} ${isActive ? styles.open : ''}`}
-                onClick={handleBurger}
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-
-            <RecordButton />
         </nav>
     )
 }

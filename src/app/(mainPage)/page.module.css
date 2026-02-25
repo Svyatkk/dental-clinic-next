@@ -5,7 +5,6 @@
     align-items: center;
     height: auto;
     position: relative;
-    border: 1px solid red;
 
 
 }
@@ -15,25 +14,24 @@
     width: 100%;
     background-image: url('../../images/marble.jpg.webp');
     background-color: rgb(37, 37, 37);
-
-
     background-blend-mode: color-dodge;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
-
-
 .layoutMain {
     margin: 0 auto;
     width: 70%;
-
-
+    padding-top: 80px;
 
     position: relative;
 }
 
+.content {
+    border: 1px solid white;
+    width: 70%;
+
+}
 
 
 .blockDesc {
@@ -241,6 +239,8 @@
         height: 80%;
     }
 
+
+    .content,
     .layoutMain {
         width: 100%;
     }

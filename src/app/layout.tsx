@@ -32,12 +32,10 @@ export default function RootLayout({
   const toggleSidebar = () => {
     setIsSidebarOpen(prev => !prev)
   }
-
-
-
   const closeSidebar = () => {
     setIsSidebarOpen(false)
   }
+
 
   return (
     <html lang="en">

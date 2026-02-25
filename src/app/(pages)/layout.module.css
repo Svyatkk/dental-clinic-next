@@ -1,7 +1,14 @@
 .container {
-    border: 10px solid yellow;
     margin: 0 auto;
     width: 70%;
+    padding-top: 70px;
+    border: 1px solid white;
 
     position: relative;
+}
+
+@media (max-width: 1220px) {
+    .container {
+        width: 100%;
+    }
 }
