@@ -5,12 +5,13 @@ export const metadata: MetaDataTypes[] = [
     {
         title: "Stoliarets.clinic",
         description: "Сімейна стоматологія",
-        page: PAGES.MAIN
+        page: PAGES.MAIN.path
     },
     {
         title: "Про нас",
         description: "",
-        page: PAGES.ABOUT
+        page: PAGES.ABOUT.path
 
     }
 ]
+

@@ -5,7 +5,7 @@ import About from "./About"
 
 
 export function generateMetadata() {
-    return generateMetadataService(PAGES.ABOUT)
+    return generateMetadataService(PAGES.ABOUT.path)
 }
 
 export default function ABoutPage() {
