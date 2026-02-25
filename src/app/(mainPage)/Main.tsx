@@ -1,10 +1,6 @@
 'use client'
 import styles from "./page.module.css";
 import Link from "next/link";
-import { generateMetadata } from "@/services/generateMetadata.services";
-
-
-
 
 
 export default function Main() {
@@ -51,25 +47,6 @@ export default function Main() {
 
 
 
-            <div className={styles.blockRec}>
-                <div className={styles.text}>
-
-                    <h1>Чому обирають саме нас?
-                    </h1>
-
-                    <p>Ми розуміємо, що кожна усмішка унікальна. Тому наші спеціалісти розробляють індивідуальні плани лікування, щоб врахувати всі особливості здоров’я та потреби кожного пацієнта.
-                        <br></br>Ми цінуємо час пацієнтів, тому забезпечуємо зручний графік та можливість попереднього запису, що дозволяє відвідувати стоматолога без черг та зайвого очікування.</p>
-
-                    <Link className={styles.details} href={'/'}>Детальніше про нас</Link>
-                </div>
-
-
-
-                <div className={styles.images}>
-
-
-                </div>
-            </div>
 
 
         </>
