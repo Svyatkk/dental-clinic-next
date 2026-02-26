@@ -1,7 +1,11 @@
 .footer {
-    height: 200px;
-    border: 1px solid white;
+    height: 500px !important;
+
+
     width: 100%;
-
-
+    background-image: url('../../images/marble.jpg.webp');
+    background-color: rgb(37, 37, 37);
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
