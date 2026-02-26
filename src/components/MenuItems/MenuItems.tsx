@@ -12,23 +12,38 @@ export default function MenuItems() {
 
     const [activeMenu, setActiveMenu] = useState<string | null>(null)
 
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth <= 1220)
+        check()
+
+        window.addEventListener('resize', check)
+        return () => window.removeEventListener('resize', check)
+    }, [])
 
     return (
         <>
             <div className={styles.buttons}>
                 <div
+
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        if (isMobile) {
+                            setActiveMenu(prev => prev === 'Послуги' ? null : 'Послуги')
+                        }
+                    }}
                     className={styles.menuItem}
-                    onMouseEnter={() => setActiveMenu('Послуги')}
-                    onMouseLeave={() => setActiveMenu(null)}>
+                    onMouseEnter={() => !isMobile && setActiveMenu('Послуги')}
+                    onMouseLeave={() => !isMobile && setActiveMenu(null)}>
+
+
 
 
                     <Link href={PAGES.SERVICES.path}>Послуги</Link>
                     <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуги'} />
 
-                    <div onClick={() => {
-                        setActiveMenu('Послуги')
-
-                    }} className={`${styles.arrowDown} ${activeMenu === 'Послуги' ? styles.active : ''}`}>
+                    <div className={`${styles.arrowDown} ${activeMenu === 'Послуги' ? styles.active : ''}`}>
 
                     </div>
 
@@ -40,23 +55,31 @@ export default function MenuItems() {
                     </Link>
                 </div>
                 <div
+
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        if (isMobile) {
+                            setActiveMenu(prev => prev === 'Про нас' ? null : 'Про нас')
+                        }
+                    }}
                     className={styles.menuItem}
 
-                    onMouseEnter={() => setActiveMenu('Про нас')}
-                    onMouseLeave={() => setActiveMenu(null)}>
+                    onMouseEnter={() => !isMobile && setActiveMenu('Про нас')}
+                    onMouseLeave={() => !isMobile && setActiveMenu(null)}>
                     <Link
+
+
 
                         href={PAGES.MAIN.path}>
                         <p>Про нас</p>
 
                     </Link>
                     <PopUpWindow type='about' activeWindow={activeMenu} isVisible={activeMenu === 'Про нас'} />
-                    <div onClick={() => {
-                        setActiveMenu('Про нас')
 
-                    }} className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}></div>
+                    <div className={`${styles.arrowDown} ${activeMenu === 'Про нас' ? styles.active : ''}`}>
+
+                    </div>
                 </div>
-
 
 
                 <div

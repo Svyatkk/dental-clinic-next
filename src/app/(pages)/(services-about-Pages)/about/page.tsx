@@ -2,6 +2,7 @@
 import { generateMetadata as generateMetadataService } from "@/services/generateMetadata.services"
 import { PAGES } from "@/config/routes"
 import About from "./About"
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs"
 
 
 export function generateMetadata() {
@@ -12,6 +13,7 @@ export default function ABoutPage() {
 
     return (
         <>
+            <Breadcrumbs page="Про нас  "></Breadcrumbs>
             <About></About>
         </>
     )

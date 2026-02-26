@@ -10,6 +10,26 @@
     justify-content: center;
     font-size: 18px;
     font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+.menuItem::before {
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    content: "";
+    transition: 0.3s;
+}
+
+.menuItem:hover::before {
+    width: 100%;
+    transition: 0.3s;
 
 }
 

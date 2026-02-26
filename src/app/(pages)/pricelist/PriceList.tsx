@@ -9,11 +9,13 @@ export default function PriceList() {
 
     const [chosed, setChosed] = useState('')
 
-    const [current, setCurrent] = useState<ServiceType | undefined>(undefined)
+    const [current, setCurrent] = useState<ServiceType[]>([])
 
     useEffect(() => {
         const find = SERVICES.find(s => s.name === chosed)
-        return setCurrent(find)
+        return setCurrent(find?.more || [])
+
+
     }, [chosed])
 
 
@@ -29,12 +31,16 @@ export default function PriceList() {
                                 setChosed(s.name)
                             }}
 
+
                             key={index} className={`${styles.block} ${s.name === chosed ? styles.active : ''}`}>
                             <h2 className={styles.name}>{s.name}</h2>
 
                             <div className={styles.list}>
-                                {current?.name}
-                                {current?.price}
+                                {current.map((item, index) => (
+                                    <div key={index}>
+                                        {item.name} - {item.price}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     })

@@ -9,3 +9,4 @@ export function generateMetadata(data: string): Metadata {
         description: pagemeta?.description
     }
 }
+

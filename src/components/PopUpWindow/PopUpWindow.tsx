@@ -33,6 +33,8 @@ export default function PopUpWindow({ isVisible, type }: Props) {
     }
 
 
+
+
     if (type === 'about') {
         const list = AboutUsData
 
