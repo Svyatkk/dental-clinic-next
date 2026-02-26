@@ -4,7 +4,8 @@
     align-items: center;
     margin-top: 40px;
     padding: 0 10px;
-
+    width: 100%;
+    max-width: 1700px;
 
 }
 
@@ -13,7 +14,6 @@
     flex-direction: column;
     gap: 30px;
     width: 30%;
-    border: 1px solid blue;
 
 
 }
@@ -70,12 +70,20 @@
     color: white;
 }
 
+
+.kolo {
+
+
+    border-radius: 50%;
+    background-color: white;
+}
+
 .imageWrapper {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    border: 12px solid #cfcfcf;
+    border: 30px solid #cfcfcf;
     transition: 0.3s;
 }
 

@@ -23,16 +23,23 @@
     margin: 0 auto;
     width: 70%;
     padding-top: 80px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
+    max-width: 1400px;
+
+
 }
 
 .content {
-    border: 10px solid white;
     width: 70%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
 
+    max-width: 1400px;
 
 }
 
@@ -73,6 +80,8 @@
     flex-direction: column;
     gap: 60px;
 }
+
+
 
 .textBlock h1 {
     font-size: 44px;
@@ -189,6 +198,10 @@
         gap: 50px;
         margin-bottom: 20px;
 
+    }
+
+    .textBlock {
+        margin-top: 20px;
     }
 
     .textBlock h1 {

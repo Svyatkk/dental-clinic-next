@@ -14,16 +14,9 @@ export default function ServicesList() {
                     return <div className={styles.block} key={index}>
                         <Link href={`${PAGES.SERVICES.path}/${s.engName}`}><h1>{s.name}</h1></Link>
                         <h1>{s.price}</h1>
-
-
-
                     </div>
                 })
-
-
             }
-
-
         </>
     )
 }

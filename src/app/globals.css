@@ -13,7 +13,13 @@
   }
 }
 
-
+.down {
+  margin-top: 300px;
+  border: 1px solid white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
 
 html,

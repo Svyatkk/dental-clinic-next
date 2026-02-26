@@ -48,9 +48,13 @@ export default function OurSpecialists() {
 
                         <SwiperSlide key={index}>
                             <div className={styles.card}>
-                                <div className={styles.imageWrapper}>
-                                    <img src={item.image} alt={item.name} />
+
+                                <div className={styles.kolo}>
+                                    <div className={styles.imageWrapper}>
+                                        <img src={item.image} alt={item.name} />
+                                    </div>
                                 </div>
+
 
                                 <h3>{item.name}</h3>
                                 <p>{item.role}</p>

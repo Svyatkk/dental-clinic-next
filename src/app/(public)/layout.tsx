@@ -21,11 +21,7 @@ export default function LayoutPublic({ children }: Props) {
     }
 
     return (
-
-
         <>
-
-
             <div className="subContainerBackground">
 
                 <Sidebar isActive={isSidebarOpen} close={closeSidebar} />
@@ -34,7 +30,6 @@ export default function LayoutPublic({ children }: Props) {
 
                 {children}
 
-                <Footer />
 
             </div>
 
