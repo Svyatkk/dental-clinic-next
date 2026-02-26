@@ -1,0 +1,16 @@
+.subContainerBackground {
+    width: 100%;
+    z-index: 4000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+@media (max-width: 1200) {
+    .subContainerBackground {
+        width: 100%;
+        border: 1px solid red;
+    }
+}
