@@ -9,6 +9,7 @@ type Props = {
 
 export default function Breadcrumbs({ page, childName }: Props) {
 
+
     let pagePath = "/";
     if (page === PAGES.SERVICES.name) pagePath = PAGES.SERVICES.path;
     if (page === PAGES.ABOUT.name) pagePath = PAGES.ABOUT.path;
@@ -18,12 +19,12 @@ export default function Breadcrumbs({ page, childName }: Props) {
 
             <Link href={PAGES.MAIN.path}>{PAGES.MAIN.name}</Link>
 
-
-
             {page && (
                 <>
                     {' / '}
                     {childName ? <Link href={pagePath}>{page}</Link> : <span>{page}</span>}
+
+
                 </>
             )}
 

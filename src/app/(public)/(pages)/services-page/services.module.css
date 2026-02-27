@@ -1,8 +1,10 @@
 .block {
-    margin: 20px;
     display: flex;
-    border: 1px solid white;
+    border: 10px solid white;
     border-radius: 15px;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+
+
 }

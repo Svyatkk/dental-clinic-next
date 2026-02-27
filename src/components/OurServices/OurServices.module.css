@@ -38,11 +38,15 @@
 }
 
 
+.active {
+    border: 10px solid green;
+}
+
+
 @media (max-width: 1220px) {
     .continerGrid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-
+        gap: 40px
     }
 }
 

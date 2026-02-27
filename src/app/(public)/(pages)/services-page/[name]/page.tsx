@@ -2,8 +2,9 @@ import { SERVICES } from "@/data/services.data"
 import { notFound } from "next/navigation"
 import { PAGES } from "@/config/routes"
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs"
-export async function generateStaticParams() {
+import styles from '../services.module.css'
 
+export async function generateStaticParams() {
     return SERVICES
         .filter(service => service.engName !== 'Service')
         .map((service) => ({

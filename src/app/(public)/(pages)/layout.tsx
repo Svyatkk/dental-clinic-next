@@ -1,3 +1,6 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import Header from '@/components/Header/Header'
 import styles from './layout.module.css'
 import { PAGES } from '@/config/routes'
@@ -8,20 +11,20 @@ type Props = {
 
 
 export default function LayoutPages({ children }: Props) {
+    const path = usePathname()
+
+
     return (
         <>
 
             <div className={styles.container}>
-
-
-                <div className={styles.block}>
+                <div className={`${styles.block} ${path === PAGES.SERVICES.path ? styles.sPage : ''}`}>
                     {children}
+
+
 
                     <ServicesSideBlock></ServicesSideBlock>
                 </div>
-
-
-
             </div>
 
         </>

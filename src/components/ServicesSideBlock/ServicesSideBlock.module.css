@@ -3,16 +3,65 @@
     border: 1px solid white;
     flex-direction: column;
     height: 500px;
-    width: 200px;
+    max-width: 220px;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+
+.page {
+    border: 1px solid green;
+    position: relative;
+    max-width: 100%;
+    display: flex;
     flex-direction: column;
 }
+
+.page .service {
+    max-width: 250px;
+    height: 200px;
+    border-radius: 25px;
+}
+
+
+.blocks {
+    border: 1px solid white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
 
 .h1 {
     font-weight: bold;
 }
 
+.text {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.service {
+    display: flex;
+    border: 1px solid white;
+    align-items: center;
+
+}
+
+.img {
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
 @media (max-width: 1200px) {
     .block {
         display: none;
+    }
+
+
+    .block.page {
+        display: grid;
     }
 }

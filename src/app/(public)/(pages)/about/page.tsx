@@ -13,7 +13,7 @@ export default function ABoutPage() {
 
     return (
         <>
-            <Breadcrumbs page="Про нас  "></Breadcrumbs>
+
             <About></About>
         </>
     )

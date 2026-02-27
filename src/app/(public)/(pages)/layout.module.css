@@ -6,13 +6,19 @@
     padding-top: 100px;
     border: 1px solid red;
 
+
     max-width: 1400px;
     position: relative;
 }
 
 .block {
     display: flex;
+    position: relative;
+    border: 5px solid purple;
+}
 
+.sPage {
+    flex-direction: column;
 }
 
 @media (max-width: 1220px) {

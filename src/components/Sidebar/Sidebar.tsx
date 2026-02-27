@@ -9,13 +9,9 @@ type Props = {
 }
 
 export default function Sidebar({ isActive, close }: Props) {
-
-
     return (
         <>
             <div className={`${styles.sideBar} ${isActive ? styles.active : ''}`}>
-
-
                 <MenuItems></MenuItems>
             </div>
 
