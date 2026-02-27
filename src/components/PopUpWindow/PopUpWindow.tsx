@@ -16,13 +16,12 @@ type Props = {
 
 export default function PopUpWindow({ isVisible, type }: Props) {
 
+
     if (type === 'services') {
-        const list = SERVICES.slice(1)
         return (
             <>
                 <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
-
-                    {list.map((service, index) => (
+                    {SERVICES.map((service, index) => (
                         <div className={style.element} key={index}>
                             {service.name}
                         </div>
@@ -32,17 +31,11 @@ export default function PopUpWindow({ isVisible, type }: Props) {
         )
     }
 
-
-
-
     if (type === 'about') {
-        const list = AboutUsData
-
         return (
             <>
                 <div className={`${style.block} ${isVisible ? style.visible : ''}`}>
-
-                    {list.map((item, index) => (
+                    {AboutUsData.map((item, index) => (
                         <div className={style.element} key={index}>
                             {item.title}
                         </div>

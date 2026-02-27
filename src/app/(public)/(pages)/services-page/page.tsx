@@ -8,14 +8,7 @@ import ServicesSideBlock from "@/components/ServicesSideBlock/ServicesSideBlock"
 export default function ServicesPage() {
     return (
         <>
-
-
             <Breadcrumbs page={"Послуги"}></Breadcrumbs>
-
-
-
         </>
-
-
     )
 }

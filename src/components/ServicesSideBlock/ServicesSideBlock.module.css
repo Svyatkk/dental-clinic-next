@@ -9,7 +9,6 @@
     gap: 10px;
 }
 
-
 .page {
     border: 1px solid green;
     position: relative;
@@ -24,15 +23,12 @@
     border-radius: 25px;
 }
 
-
 .blocks {
     border: 1px solid white;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
 }
-
 
 .h1 {
     font-weight: bold;
@@ -47,7 +43,6 @@
     display: flex;
     border: 1px solid white;
     align-items: center;
-
 }
 
 .img {
@@ -59,7 +54,6 @@
     .block {
         display: none;
     }
-
 
     .block.page {
         display: grid;

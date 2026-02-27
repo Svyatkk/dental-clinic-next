@@ -2,6 +2,7 @@
     width: auto;
     display: flex;
     gap: 100px;
+
 }
 
 .menuItem {
@@ -13,8 +14,6 @@
     transition: 0.3s;
     cursor: pointer;
 }
-
-
 
 .menuItem::before {
     position: absolute;

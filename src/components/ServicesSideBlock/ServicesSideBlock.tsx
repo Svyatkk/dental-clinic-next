@@ -3,15 +3,16 @@
 import style from './ServicesSideBlock.module.css'
 import { SERVICES } from '@/data/services.data'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { PAGES } from '@/config/routes'
+
 
 
 
 export default function ServicesSideBlock() {
 
     const path = usePathname()
-
+    const route = useRouter()
 
     return (
         <>
@@ -19,7 +20,11 @@ export default function ServicesSideBlock() {
                 <h1 className={style.h1}>Послуги</h1>
                 <div className={` ${path === PAGES.SERVICES.path ? style.blocks : ''}`}>
                     {SERVICES.map((s, index) => {
-                        return <div key={index} className={style.service}>
+                        return <div
+                            onClick={() => {
+                                route.push(`${PAGES.SERVICES.path}/${s.engName}`)
+                            }}
+                            key={index} className={style.service}>
                             <Image
                                 className={style.img}
                                 alt='something'

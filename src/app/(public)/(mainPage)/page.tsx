@@ -4,7 +4,7 @@ import Main from "./Main";
 import { PAGES } from "@/config/routes";
 import { generateMetadata as getMetadataService } from "@/services/generateMetadata.services";
 export function generateMetadata() {
-  return getMetadataService(PAGES.MAIN.name);
+  return getMetadataService(PAGES.MAIN.path);
 }
 
 export default function Home() {

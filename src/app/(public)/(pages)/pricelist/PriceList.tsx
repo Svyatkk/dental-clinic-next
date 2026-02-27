@@ -6,9 +6,7 @@ import { SERVICES } from '@/data/services.data'
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs'
 import { ServiceType } from '@/types/service.type'
 export default function PriceList() {
-
     const [chosed, setChosed] = useState('')
-
     const [current, setCurrent] = useState<ServiceType[]>([])
 
     useEffect(() => {
@@ -18,6 +16,8 @@ export default function PriceList() {
 
     return (
         <>
+
+            <h1>Ціни</h1>
             <div className={styles.container}>
 
                 {
@@ -27,7 +27,6 @@ export default function PriceList() {
                             onClick={() => {
                                 setChosed(s.name)
                             }}
-
                             key={index} className={`${styles.block} ${s.name === chosed ? styles.active : ''}`}>
                             <h2 className={styles.name}>{s.name}</h2>
 

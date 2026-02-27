@@ -37,9 +37,6 @@ export default function MenuItems() {
                     onMouseEnter={() => !isMobile && setActiveMenu('Послуги')}
                     onMouseLeave={() => !isMobile && setActiveMenu(null)}>
 
-
-
-
                     <Link href={PAGES.SERVICES.path}>Послуги</Link>
                     <PopUpWindow type='services' activeWindow={activeMenu} isVisible={activeMenu === 'Послуги'} />
 
@@ -50,12 +47,11 @@ export default function MenuItems() {
                 </div>
 
                 <div className={styles.menuItem}>
-                    <Link href={PAGES.MAIN.path}>
+                    <Link href={PAGES.PRICE_LIST.path}>
                         <p>Ціни</p>
                     </Link>
                 </div>
                 <div
-
                     onClick={(e) => {
                         e.stopPropagation()
                         if (isMobile) {
@@ -67,10 +63,7 @@ export default function MenuItems() {
                     onMouseEnter={() => !isMobile && setActiveMenu('Про нас')}
                     onMouseLeave={() => !isMobile && setActiveMenu(null)}>
                     <Link
-
-
-
-                        href={PAGES.MAIN.path}>
+                        href={PAGES.ABOUT.path}>
                         <p>Про нас</p>
 
                     </Link>
@@ -80,12 +73,9 @@ export default function MenuItems() {
 
                     </div>
                 </div>
-
-
                 <div
                     className={styles.menuItem}
                 >
-
                     <Link href={PAGES.MAIN.path}>
                         <p>Контакти</p>
                     </Link>

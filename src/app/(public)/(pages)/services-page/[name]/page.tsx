@@ -4,6 +4,8 @@ import { PAGES } from "@/config/routes"
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs"
 import styles from '../services.module.css'
 
+
+
 export async function generateStaticParams() {
     return SERVICES
         .filter(service => service.engName !== 'Service')
@@ -11,6 +13,7 @@ export async function generateStaticParams() {
             name: service.engName,
         }))
 }
+
 
 type Props = {
     params: Promise<{ name: string }>
@@ -26,7 +29,6 @@ export default async function ServicePage({ params }: Props) {
     }
     return (
         <>
-
             <Breadcrumbs page={PAGES.SERVICES.name} childName={found.name}></Breadcrumbs>
             <div style={{ padding: '20px' }}>
                 <h1>{found.name}</h1>
