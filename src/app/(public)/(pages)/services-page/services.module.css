@@ -8,3 +8,14 @@
 
 
 }
+
+.name {
+    border: 1px solid red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}

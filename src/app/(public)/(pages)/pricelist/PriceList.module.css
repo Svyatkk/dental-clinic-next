@@ -70,6 +70,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 
+
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -89,6 +90,15 @@
 
     max-height: 500px;
     opacity: 1;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.activeLIst {
+    max-height: 500px;
+    opacity: 1;
+
 
     padding-top: 15px;
     padding-bottom: 15px;

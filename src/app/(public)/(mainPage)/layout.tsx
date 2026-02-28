@@ -16,13 +16,12 @@ export default function Main({ children }: Props) {
                     {children}
                 </div>
 
-
             </div>
             <div className={styles.content}>
                 <BlockRecomendation></BlockRecomendation>
                 <OurSpecialists></OurSpecialists>
 
-                <ServicesSideBlock></ServicesSideBlock>
+                <ServicesSideBlock ></ServicesSideBlock>
             </div>
 
 
