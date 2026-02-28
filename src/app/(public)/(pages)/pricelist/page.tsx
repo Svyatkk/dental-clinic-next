@@ -13,6 +13,8 @@ export default function page() {
             <div className={styles.blockPage}>
                 <Breadcrumbs page="Ціни"></Breadcrumbs>
                 <PriceList></PriceList>
+
+
             </div>
         </>
     )

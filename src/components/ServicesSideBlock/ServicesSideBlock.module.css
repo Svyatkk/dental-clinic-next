@@ -14,6 +14,7 @@
     position: relative;
     max-width: 100%;
     display: flex;
+
     flex-direction: column;
 }
 
@@ -21,6 +22,19 @@
     max-width: 250px;
     height: 200px;
     border-radius: 25px;
+    position: relative;
+
+}
+
+.page .img {
+    display: none;
+}
+
+.page .service .text {
+    position: absolute;
+    bottom: -15%;
+    border: 1px solid white;
+    font-size: 1em;
 }
 
 .blocks {
@@ -28,6 +42,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+
 }
 
 .h1 {

@@ -1,8 +1,8 @@
 import styles from './page.module.css'
 import BlockRecomendation from '@/components/BlockRecomendation/BlockRecomendation'
 import Footer from '@/components/Footer/Footer'
-import OurServices from '@/components/OurServices/OurServices'
 import OurSpecialists from '@/components/OurSpecialists/OurSpecialists'
+import ServicesSideBlock from '@/components/ServicesSideBlock/ServicesSideBlock'
 type Props = {
     children: React.ReactNode
 }
@@ -20,8 +20,9 @@ export default function Main({ children }: Props) {
             </div>
             <div className={styles.content}>
                 <BlockRecomendation></BlockRecomendation>
-                <OurServices></OurServices>
                 <OurSpecialists></OurSpecialists>
+
+                <ServicesSideBlock></ServicesSideBlock>
             </div>
 
 

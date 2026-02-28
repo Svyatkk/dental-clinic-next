@@ -6,38 +6,46 @@ import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { PAGES } from '@/config/routes'
 
-
-
-
 export default function ServicesSideBlock() {
-
     const path = usePathname()
     const route = useRouter()
 
+    const mainPage = PAGES.MAIN.path
+    const servicesPag = PAGES.SERVICES.path
+
+    const isTargetPage = path === servicesPag || path === mainPage;
+
     return (
         <>
-            <div className={`${style.block} ${path === PAGES.SERVICES.path ? style.page : ''}`}>
+            <div className={`${style.block} ${isTargetPage ? style.page : ''}`}>
                 <h1 className={style.h1}>Послуги</h1>
-                <div className={` ${path === PAGES.SERVICES.path ? style.blocks : ''}`}>
+
+                <div className={` ${isTargetPage ? style.blocks : ''}`}>
                     {SERVICES.map((s, index) => {
                         return <div
                             onClick={() => {
                                 route.push(`${PAGES.SERVICES.path}/${s.engName}`)
                             }}
-                            key={index} className={style.service}>
+                            key={index}
+                            className={style.service}
+
+                            style={isTargetPage ? {
+                                backgroundImage: `url(${s.hrefImg})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            } : {}}
+                        >
                             <Image
                                 className={style.img}
-                                alt='something'
+                                alt={s.name}
                                 height={35}
                                 width={35}
                                 src={s.hrefImg}
-
-                            ></Image>
+                            />
                             <p className={style.text}>{s.name}</p>
                         </div>
                     })}
                 </div>
-
             </div>
         </>
     )
